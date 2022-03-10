@@ -4,22 +4,32 @@
       {{title}}
     </mat-card-title>
   </mat-card-header>
-  <mat-card-content>
-    <mat-list>
-      <mat-list-item *ngFor="let lesson of courseLessons"
-        (click)="selectLesson(lesson)" >
-        <h3>{{lesson.title}}</h3>
-      </mat-list-item>
-    </mat-list>
-  </mat-card-content>
+    <mat-card-content>
+      {{themeColor}}
+      <hr>
+        <span [style.color]='themeColor'>some color</span>
+      <hr>  
+        <input matInput [(ngModel)]='themeColor'  placeholder="Ex. red" value="color">
+     <!-- <pre>{{courseLessons | json}}</pre> -->
+     <hr>
+     <button mat-button (mouseout)="updateColor()">Update</button>
+     <mat-list>
+       <mat-list-item *ngFor="let lesson of courseLessons" 
+        (click)="selectLesson(lesson)">
+          <h3>{{lesson.title}}</h3>
+       </mat-list-item>
+     </mat-list>
+    </mat-card-content>
 </mat-card>
 
 <mat-card>
     <mat-card-header>
-        <mat-card-title>DEBUG</mat-card-title>
+        <mat-card-title>Debug</mat-card-title>    
     </mat-card-header>
-    <mat-card-content>
-        <span *ngIf="currentLesson; else elseBlock">{{currentLesson | json}}</span>
-        <ng-template #elseBlock>Select a lesson</ng-template>
+    <mat-card-content> 
+      <!-- /*ngIf and elseblock not functioning in matcardcontent/ -->
+       <span *ngIf="currentLesson; else elseBlock">{{currentLesson | json}}</span> 
+        <ng-template #elseBlock>select a lesson</ng-template>
+
     </mat-card-content>
 </mat-card>

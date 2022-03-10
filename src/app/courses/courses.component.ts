@@ -1,17 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.scss']
 })
 export class CoursesComponent implements OnInit {
-  // CHALLENGE
-  // STEP 01: Update the form to show percentComplete
-  // STEP 02: Updaet the form to show favorite
-
   selectedCourse = null;
-
   courses = [
     {
       id: 1,
@@ -21,9 +17,9 @@ export class CoursesComponent implements OnInit {
       favorite: true
     },
     {
-      id: 2,
-      title: 'JavaScript The Really REALLY HARD PARTS',
-      description: 'Worship Will Sentance',
+      id: 12,
+      title: 'js hard parts',
+      description: 'will sentance course',
       percentComplete: 50,
       favorite: true
     }
@@ -46,6 +42,7 @@ export class CoursesComponent implements OnInit {
 
     this.selectedCourse = emptyCourse;
   }
+ 
 
   selectCourse(course) {
     this.selectedCourse = course;
