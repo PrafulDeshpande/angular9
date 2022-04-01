@@ -12,7 +12,7 @@
         <input matInput [(ngModel)]='themeColor'  placeholder="Ex. red" value="color">
      <!-- <pre>{{courseLessons | json}}</pre> -->
      <hr>
-     <button mat-button (mouseout)="updateColor()">Update</button>
+     <button mat-button (click)="updateColor()">Update</button>
      <mat-list>
        <mat-list-item *ngFor="let lesson of courseLessons" 
         (click)="selectLesson(lesson)">
