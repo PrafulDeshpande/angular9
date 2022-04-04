@@ -19,7 +19,6 @@
             </button>
           </mat-list-item>
         </mat-list>
-
       </mat-card-content>
     </mat-card>
   </div>
@@ -63,8 +62,21 @@
         <mat-card-actions>
           <button [disabled]="form.invalid" type="submit" mat-button color="primary">Submit</button>
           <button type="button" mat-button (click)="cancel()">Cancel</button>
+          <!-- 
+            if forms is invalid then the submit button is invalid that is the 
+            functionality of disabled
+           -->
         </mat-card-actions>
       </form>
+      <pre>{{form.value | json}}</pre>
+      <!-- 
+          # represents the local variable which can be used anywhere in the current template
+          for #form which is assigned to ngForm.
+          form generally explains what happens under the hood i.e. it can be seen 
+          using the pre tag as shown in the example above.
+          pre tag is used as debug method. to check whether something is working or not
+    
+        -->
     </mat-card>
   </div>
 </div>
