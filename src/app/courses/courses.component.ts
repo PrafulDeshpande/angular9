@@ -20,6 +20,8 @@ export class CoursesComponent implements OnInit {
   ngOnInit(): void {
     this.resetSelectedCourse();
     this.courses = this.coursesService.all();
+    // console.log('this is', this.courses)
+    // console.log('this is wat', this.selectedCourse)
   }
 
   resetSelectedCourse() {
