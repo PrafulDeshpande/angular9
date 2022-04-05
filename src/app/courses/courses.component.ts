@@ -39,9 +39,8 @@ export class CoursesComponent implements OnInit {
     this.selectedCourse = course;
   }
 
-  loadCourses() {
-    this.coursesService.all()
-      .subscribe(courses => this.courses = courses);
+  loadCourses(){
+  this.coursesService.all().subscribe(course=>this.courses=course);
   }
 
   saveCourse(course) {

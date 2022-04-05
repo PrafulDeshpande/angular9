@@ -8,17 +8,13 @@
       "favorite": true
     },
     {
-      "id": 2,
-      "title": "Functional JavaScript",
-      "description": "Brian is a demi-god",
-      "percentComplete": 0,
-      "favorite": false
+      "id": 2
     },
     {
       "id": 3,
-      "title": "GraphQL for the Masses",
-      "description": "Scott Moss is the Boss",
-      "percentComplete": 0,
+      "title": "JS",
+      "description": "will",
+      "percentComplete": 7,
       "favorite": false
     },
     {
