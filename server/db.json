@@ -8,20 +8,17 @@
       "favorite": true
     },
     {
-      "id": 2
-    },
-    {
       "id": 3,
       "title": "JS",
       "description": "will",
-      "percentComplete": 7,
-      "favorite": false
+      "percentComplete": 51,
+      "favorite": true
     },
     {
       "id": 4,
-      "title": "Creating a Learning Empire",
-      "description": "Marc G Gets It Done",
-      "percentComplete": 0,
+      "title": "React Native",
+      "description": "Kadi kraman",
+      "percentComplete": 30,
       "favorite": false
     }
   ]

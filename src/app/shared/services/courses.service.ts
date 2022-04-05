@@ -2,10 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 
-const BASE_URL = 'http://localhost:3000/';
-
-
 const Base_URL = "http://localhost:3000/";
+
 @Injectable({
   providedIn: 'root'
 })
@@ -28,14 +26,18 @@ export class CoursesService {
   }
 
   update(course) {
-    console.log('UDDATE COURSE', course);
+    return this.http.put(this.getUrlByID(course.id), course)
+    // console.log('UDDATE COURSE', course);
   }
 
   delete(courseId) {
-    console.log('DLETE COURSE', courseId);
+    return this.http.delete(this.getUrlByID(courseId))
   }
 
   private getURL() {
     return `${Base_URL}${this.model}`
+  }
+  private getUrlByID(id){
+    return `${this.getURL()}/${id}`
   }
 }
