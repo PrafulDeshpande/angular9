@@ -5,7 +5,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './courses-details.component.html',
   styleUrls: ['./courses-details.component.scss']
 })
-export class CoursesDetailsComponent implements OnInit {
+export class CoursesDetailsComponent  {
   selectedCourse;
   originalTitle;
 
@@ -28,9 +28,5 @@ export class CoursesDetailsComponent implements OnInit {
 @Output() saved = new EventEmitter();
 @Output() cancel = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
