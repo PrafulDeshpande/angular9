@@ -14,7 +14,7 @@ export class CoursesComponent implements OnInit {
 
   selectedCourse = null;
 
-  courses = null;
+  coursesInitial = null;
 
   constructor(private coursesService: CoursesService) { }
 
@@ -40,7 +40,7 @@ export class CoursesComponent implements OnInit {
   }
 
   loadCourses(){
-  this.coursesService.all().subscribe(course=>this.courses=course);
+  this.coursesService.all().subscribe(course=>this.coursesInitial=course);
   // what does subscribe does 
   }
 
