@@ -20,6 +20,13 @@
       "description": "Kadi kraman",
       "percentComplete": 30,
       "favorite": false
+    },
+    {
+      "id": 5,
+      "title": "Functional JS",
+      "description": "Excellent course by Will Sentance",
+      "percentComplete": 54,
+      "favorite": true
     }
   ]
 }

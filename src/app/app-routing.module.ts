@@ -3,10 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { CoursesComponent } from './courses/courses.component';
 import { HomeComponent } from './home/home.component';
+import { UsersComponent } from './users/users.component';
+
+// challenge 
+// Generate a new users component
+// Create  a new users route
+// update sidenav to route to new users route
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'courses', component: CoursesComponent },
+  {path:'login', loadChildren:()=>import('./login/login.module').then(m=>m.LoginModule)},
+  {path:'users', component: UsersComponent},
   { path: '**', redirectTo: '/home' }
 ];
 
